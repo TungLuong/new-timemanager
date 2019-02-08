@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_week_of_year"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAllCaps="true"
+            android:text="Thống kê tuần 0"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginRight="60dp"
+            />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_open_calendar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_date_range_white_24dp" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:id="@+id/rcv_kind_of_action"
+        android:layout_below="@id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+    <!--<ScrollView-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:layout_below="@id/fab_open_calendar"-->
+        <!--android:padding="5dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginBottom="50dp">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_marginTop="3dp"-->
+                        <!--android:layout_width="56dp"-->
+                        <!--android:layout_height="24dp"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:src="@drawable/background_free_time" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="172dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:text="Hoạt động tự do"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="17sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_action_done_1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:text="0/0"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="20sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_marginTop="3dp"-->
+                        <!--android:layout_width="56dp"-->
+                        <!--android:layout_height="24dp"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:src="@drawable/background_action_outside" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="172dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:text="Hoạt động bên ngoài"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="17sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_action_done_2"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:text="0/0"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="20sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_marginTop="3dp"-->
+                        <!--android:layout_width="56dp"-->
+                        <!--android:layout_height="24dp"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:src="@drawable/background_action_at_home" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="172dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:text="Hoạt động tại nhà"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="17sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_action_done_3"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:text="0/0"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="20sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_marginTop="3dp"-->
+                        <!--android:layout_width="56dp"-->
+                        <!--android:layout_height="24dp"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:src="@drawable/background_action_entertainment" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="172dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:text="Hoạt động giải trí"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="17sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_action_done_4"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:text="0/0"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="20sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_marginTop="3dp"-->
+                        <!--android:layout_width="56dp"-->
+                        <!--android:layout_height="24dp"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:src="@drawable/background_action_relax" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="172dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:text="Hoạt động nghỉ ngơi"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="17sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_action_done_5"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:text="0/0"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="20sp" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        <!--</RelativeLayout>-->
+    <!--</ScrollView>-->
+
+</RelativeLayout>

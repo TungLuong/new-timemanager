@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="35dp"
+    android:paddingRight="30dp">
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/tv_day_of_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thứ 2"
+        android:textSize="18sp"
+        android:textColor="#000"/>
+    <TextView
+        android:singleLine="true"
+        android:layout_weight="3"
+        android:id="@+id/tv_title"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=" ABC"
+        android:textSize="18sp"
+        android:textColor="#000"/>
+    <TextView
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_time"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 7h - 8h "
+        android:textSize="18sp"
+        android:textColor="#000"/>
+    <ImageView
+        android:id="@+id/imv_complete"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_complete_24dp"/>
+
+
+</LinearLayout>
