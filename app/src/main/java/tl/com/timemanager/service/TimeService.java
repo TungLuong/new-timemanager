@@ -276,9 +276,12 @@ public class TimeService extends Service {
         if (currDay != day) {
             currDay = day;
             if (currDay == 0) {
+                Calendar cal = Calendar.getInstance();
+                //clean action in week
+                updateActionsInWeek(cal.get(Calendar.WEEK_OF_YEAR), cal.get(Calendar.YEAR));
+                //update action
                 updateActionsInWeekFromTimeTable(currDay);
                 if (iUpdateUI != null) {
-                    Calendar cal = Calendar.getInstance();
                     iUpdateUI.updateActionsInWeek(currDay, cal.get(Calendar.WEEK_OF_YEAR), cal.get(Calendar.YEAR));
                 }
             }

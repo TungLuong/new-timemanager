@@ -314,34 +314,34 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        List<Fragment> fragments = getSupportFragmentManager().getFragments();
-//        if (fragments != null) {
-//            for (Fragment fragment : fragments) {
-//                if (fragment != null && fragment instanceof DaysInWeekFragment && fragment.isVisible()) {
-//                    Calendar cal = Calendar.getInstance();
-//                    if(((DaysInWeekFragment) fragment).getWeekOfYear() != cal.get(Calendar.WEEK_OF_YEAR)) {
-//                        ((DaysInWeekFragment) fragment).updateActionsInWeek(cal.get(Calendar.DAY_OF_WEEK)-1,cal.get(Calendar.WEEK_OF_YEAR),cal.get(Calendar.YEAR));
-//                        timeService.updateActionsInWeekFromTimeTable(cal.get(Calendar.DAY_OF_WEEK) -1 );
-//                    }
-//                    ((DaysInWeekFragment) fragment).setCurrentItemFragment(cal.get(Calendar.DAY_OF_WEEK)-1);
-//                    ((DaysInWeekFragment) fragment).updateUI();
-//                    break;
-//                }
-//                if (fragment != null && fragment instanceof ActionStatisticsFragment && fragment.isVisible()) {
-//                    Calendar cal = Calendar.getInstance();
-//                    if(((ActionStatisticsFragment) fragment).getWeekOfYear() != cal.get(Calendar.WEEK_OF_YEAR)) {
-//                        ((ActionStatisticsFragment) fragment).updateActionsInWeek(cal.get(Calendar.DAY_OF_WEEK)-1,cal.get(Calendar.WEEK_OF_YEAR),cal.get(Calendar.YEAR));
-//                        timeService.updateActionsInWeekFromTimeTable(cal.get(Calendar.DAY_OF_WEEK) -1 );
-//                    }
-//                    ((ActionStatisticsFragment) fragment).updateActionStatisticFragment(cal.get(Calendar.DAY_OF_WEEK)-1);
-//                }
-//            }
-//        }
-//
-//    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        List<Fragment> fragments = getSupportFragmentManager().getFragments();
+        if (fragments != null) {
+            for (Fragment fragment : fragments) {
+                if (fragment != null && fragment instanceof DaysInWeekFragment && fragment.isVisible()) {
+                    Calendar cal = Calendar.getInstance();
+                    if(((DaysInWeekFragment) fragment).getWeekOfYear() != cal.get(Calendar.WEEK_OF_YEAR)) {
+                        ((DaysInWeekFragment) fragment).updateActionsInWeek(cal.get(Calendar.DAY_OF_WEEK)-1,cal.get(Calendar.WEEK_OF_YEAR),cal.get(Calendar.YEAR));
+                        timeService.updateActionsInWeekFromTimeTable(cal.get(Calendar.DAY_OF_WEEK) -1 );
+                    }
+                    ((DaysInWeekFragment) fragment).setCurrentItemFragment(cal.get(Calendar.DAY_OF_WEEK)-1);
+                    ((DaysInWeekFragment) fragment).updateUI();
+                    break;
+                }
+                if (fragment != null && fragment instanceof ActionStatisticsFragment && fragment.isVisible()) {
+                    Calendar cal = Calendar.getInstance();
+                    if(((ActionStatisticsFragment) fragment).getWeekOfYear() != cal.get(Calendar.WEEK_OF_YEAR)) {
+                        ((ActionStatisticsFragment) fragment).updateActionsInWeek(cal.get(Calendar.DAY_OF_WEEK)-1,cal.get(Calendar.WEEK_OF_YEAR),cal.get(Calendar.YEAR));
+                        timeService.updateActionsInWeekFromTimeTable(cal.get(Calendar.DAY_OF_WEEK) -1 );
+                    }
+                    ((ActionStatisticsFragment) fragment).updateActionStatisticFragment(cal.get(Calendar.DAY_OF_WEEK)-1);
+                }
+            }
+        }
+
+    }
 
 
 }
