@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -86,11 +87,13 @@ public class DaysInWeekFragment extends BaseFragment implements BaseCalendarDial
         fabInsert = view.findViewById(R.id.fab_insert);
         fabOpenCalendar = view.findViewById(R.id.fab_open_calendar);
         fabMore = view.findViewById(R.id.fab_more);
-        // fabSync = view.findViewById(R.id.fab_sync);
+        fabSync = view.findViewById(R.id.fab_sync);
 
         fabMore.setOnClickListener(this);
         fabInsert.setOnClickListener(this);
         fabOpenCalendar.setOnClickListener(this);
+        fabSync.setOnClickListener(this);
+
 
         updateFloatingActionButton();
     }
@@ -116,16 +119,16 @@ public class DaysInWeekFragment extends BaseFragment implements BaseCalendarDial
             fabInsert.setVisibility(View.VISIBLE);
             fabOpenCalendar.setClickable(true);
             fabOpenCalendar.setVisibility(View.VISIBLE);
-//            fabSync.setClickable(true);
-//            fabSync.setVisibility(View.VISIBLE);
+            fabSync.setClickable(true);
+            fabSync.setVisibility(View.VISIBLE);
         } else {
             fabMore.setImageResource(R.drawable.ic_more_horiz_white_24dp);
             fabInsert.setClickable(false);
             fabInsert.setVisibility(View.INVISIBLE);
             fabOpenCalendar.setClickable(false);
             fabOpenCalendar.setVisibility(View.INVISIBLE);
-//            fabSync.setClickable(false);
-//            fabSync.setVisibility(View.INVISIBLE);
+            fabSync.setClickable(false);
+            fabSync.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -162,14 +165,21 @@ public class DaysInWeekFragment extends BaseFragment implements BaseCalendarDial
                 fabMoreIsOpen = !fabMoreIsOpen;
                 updateFloatingActionButton();
                 break;
-//            case R.id.fab_sync:
-//                // đồng bộ dữ liệu hiển thị
-//                service.updateActionsInWeekFromTimeTable(dayOfWeek);
-//               // service.checkActionsDone(dayOfWeek);
-//                service.updateActionsInWeek(weekOfYear,year);
-//                actionItemAdapter.notifyDataSetChanged();
-//                Toast.makeText(getActivity(),"Đồng bộ thành công",Toast.LENGTH_LONG).show();
-//                break;
+            case R.id.fab_sync:
+                int dayOfWeek = position;
+                // đồng bộ dữ liệu hiển thị
+                timeService.updateActionsInWeekFromTimeTable(dayOfWeek);
+                timeService.checkActionsDone(dayOfWeek);
+                timeService.updateActionsInWeek(weekOfYear,year);
+                if (fragments != null) {
+                    for (Fragment fragment : fragments) {
+                        if (fragment.isVisible() && fragment != null ) {
+                            ((ActionsInDayFragment) fragment).changedActionItem();
+                        }
+                    }
+                }
+                Toast.makeText(getActivity(),"Đồng bộ thành công",Toast.LENGTH_LONG).show();
+                break;
         }
 
     }

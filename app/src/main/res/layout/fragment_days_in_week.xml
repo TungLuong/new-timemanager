@@ -37,6 +37,17 @@
 
     <android.support.design.widget.FloatingActionButton
         android:visibility="visible"
+        android:id="@+id/fab_sync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="215dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_sync_white_24dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:visibility="visible"
         android:id="@+id/fab_insert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
