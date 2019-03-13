@@ -2,7 +2,7 @@
 
 1. Tình huống
 	- Nhiều người không thể quản lý, phân chia thời gian một cách hợp lý, khoa học và hiệu quả, gây lãng phí nhiều thời gian và bỏ lỡ nhiều hoạt động quan trọng
-	-Việc có kế hoạch, thời gian biểu hợp lý là rất quan trọng và không phải ai cũng có thể tự lập một thời gian biểu hợp 	lý.Thật tuyệt vời nếu như có một ứng dụng, một công cụ giúp mọi người quản lý thời gian và lập thời gian biểu
+	- Việc có kế hoạch, thời gian biểu hợp lý là rất quan trọng và không phải ai cũng có thể tự lập một thời gian biểu hợp 	lý.Thật tuyệt vời nếu như có một ứng dụng, một công cụ giúp mọi người quản lý thời gian và lập thời gian biểu
 2. Mục tiêu
 	- Giúp người dùng dễ dàng lập một kế hoạch, thời gian biểu hợp lý
 	- Giúp người dùng tạo thói quen sinh hoạt theo kế hoạch sau khi có thời gian biểu
